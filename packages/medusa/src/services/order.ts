@@ -1162,7 +1162,7 @@ class OrderService extends TransactionBaseService {
         await this.updateBillingAddress(order, billing_address as Address)
       }
 
-      if (update.no_notification) {
+      if (update.no_notification !== undefined) {
         order.no_notification = no_notification ?? false
       }
 
